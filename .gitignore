@@ -1,0 +1,27 @@
+# oh-my-agent runtime (local artifacts — do not commit)
+.antigravitycli/
+.agents/results/
+.agents/state/
+.agents/backup/
+.migration-backup/
+
+# Huddling harness local runs and Python cache
+runs/
+__pycache__/
+*.pyc
+
+# Local agent installations, generated integrations and machine settings
+/.agents/
+/.codex/
+/.claude/
+/.cursor/
+/.grok/
+/.pi/
+/.serena/
+/.github/prompts/
+/.github/skills/
+/.mcp.json
+.DS_Store
+.env
+.env.*
+!.env.example

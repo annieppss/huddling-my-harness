@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "screen_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "screen_id",
+          "width",
+          "height",
+          "description"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    }
+  },
+  "required": [
+    "frames"
+  ],
+  "additionalProperties": false
+}

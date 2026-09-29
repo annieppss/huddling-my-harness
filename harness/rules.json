@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "stages": [
+    "research",
+    "plan",
+    "concept",
+    "design",
+    "review"
+  ],
+  "files": {
+    "research": "research/artifact.json",
+    "plan": "plan/artifact.json",
+    "concept": "concept/artifact.json",
+    "design": "design/artifact.json",
+    "review": "review/artifact.json"
+  },
+  "approval_after": "concept",
+  "frame": {
+    "width": 390,
+    "height": 844,
+    "min_count": 2,
+    "max_count": 3
+  },
+  "tokens": {
+    "colors.primary": "#141414",
+    "colors.accent": "#0066ff",
+    "colors.canvas": "#ffffff",
+    "colors.canvas-soft": "#f3f3f3",
+    "colors.field": "#f0f0f0",
+    "colors.hairline-soft": "#f0f0f0",
+    "colors.hairline": "#e0e0e0",
+    "colors.ink": "#141414",
+    "colors.ink-soft": "#262626",
+    "colors.text-muted": "#707070",
+    "colors.text-faint": "#adadad",
+    "colors.on-primary": "#ffffff",
+    "rounded.none": 0,
+    "rounded.sm": 16,
+    "rounded.md": 24,
+    "rounded.full": 9999,
+    "spacing.xxs": 4,
+    "spacing.xs": 8,
+    "spacing.sm": 12,
+    "spacing.md": 16,
+    "spacing.lg": 24,
+    "spacing.xl": 32,
+    "spacing.section": 48,
+    "spacing.section-lg": 64,
+    "typography.display": {
+      "font": "Pretendard",
+      "size": 32,
+      "weight": 700,
+      "line_height": 1.3,
+      "letter_spacing": 0
+    },
+    "typography.heading-1": {
+      "font": "Pretendard",
+      "size": 28,
+      "weight": 700,
+      "line_height": 1.3,
+      "letter_spacing": 0
+    },
+    "typography.heading-2": {
+      "font": "Pretendard",
+      "size": 24,
+      "weight": 700,
+      "line_height": 1.35,
+      "letter_spacing": 0
+    },
+    "typography.heading-3": {
+      "font": "Pretendard",
+      "size": 20,
+      "weight": 700,
+      "line_height": 1.35,
+      "letter_spacing": 0
+    },
+    "typography.heading-4": {
+      "font": "Pretendard",
+      "size": 18,
+      "weight": 700,
+      "line_height": 1.35,
+      "letter_spacing": 0
+    },
+    "typography.title": {
+      "font": "Pretendard",
+      "size": 17,
+      "weight": 600,
+      "line_height": 1.4,
+      "letter_spacing": 0
+    },
+    "typography.body-lg": {
+      "font": "Pretendard",
+      "size": 17,
+      "weight": 300,
+      "line_height": 1.5,
+      "letter_spacing": 0
+    },
+    "typography.body": {
+      "font": "Pretendard",
+      "size": 15,
+      "weight": 400,
+      "line_height": 1.5,
+      "letter_spacing": 0
+    },
+    "typography.body-sm": {
+      "font": "Pretendard",
+      "size": 13,
+      "weight": 400,
+      "line_height": 1.5,
+      "letter_spacing": 0
+    },
+    "typography.link": {
+      "font": "Pretendard",
+      "size": 15,
+      "weight": 600,
+      "line_height": 1.5,
+      "letter_spacing": 0
+    },
+    "typography.label": {
+      "font": "Pretendard",
+      "size": 12,
+      "weight": 600,
+      "line_height": 1.4,
+      "letter_spacing": 0
+    },
+    "typography.caption": {
+      "font": "Pretendard",
+      "size": 12,
+      "weight": 400,
+      "line_height": 1.4,
+      "letter_spacing": 0
+    }
+  },
+  "policy": {
+    "default_visibility": "private",
+    "publish_requires_owner_choice": true,
+    "sale_requires_review": true,
+    "sale_request_roles": [
+      "seller",
+      "admin"
+    ]
+  },
+  "interactive_kinds": [
+    "button",
+    "nav",
+    "badge",
+    "toggle"
+  ],
+  "component_kinds": [
+    "button",
+    "nav",
+    "badge",
+    "toggle",
+    "input",
+    "card",
+    "text"
+  ],
+  "review_checks": [
+    "source_grounding",
+    "service_invariants",
+    "design_consistency"
+  ],
+  "resolutions": {
+    "shadows": "none, including active segments, modals and toasts",
+    "featured_pricing": "canvas-soft, not inverse",
+    "on-primary": "white (#ffffff), inferred from white labels in design.md",
+    "input_radius": "rounded.sm; specific input rule takes priority over general interactive pill rule"
+  }
+}

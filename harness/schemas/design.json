@@ -1,0 +1,171 @@
+{
+  "type": "object",
+  "properties": {
+    "tokens": {
+      "type": "object"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "button",
+              "nav",
+              "badge",
+              "toggle",
+              "input",
+              "card",
+              "text"
+            ]
+          },
+          "fill": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text_color": {
+            "type": "string",
+            "minLength": 1
+          },
+          "radius": {
+            "type": "string",
+            "minLength": 1
+          },
+          "typography": {
+            "type": "string",
+            "minLength": 1
+          },
+          "spacing": {
+            "type": "string",
+            "minLength": 1
+          },
+          "shadow": {
+            "type": "boolean"
+          },
+          "accent_usage": {
+            "type": "string",
+            "enum": [
+              "none",
+              "popular",
+              "savings"
+            ]
+          },
+          "variant": {
+            "type": "string",
+            "enum": [
+              "default",
+              "primary",
+              "featured_pricing"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "fill",
+          "text_color",
+          "radius",
+          "typography",
+          "spacing",
+          "shadow",
+          "accent_usage",
+          "variant"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "screens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "component_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "width",
+          "height",
+          "component_ids",
+          "description"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "asset_policy": {
+      "type": "object",
+      "properties": {
+        "default_visibility": {
+          "type": "string",
+          "enum": [
+            "private",
+            "member_only",
+            "for_sale"
+          ]
+        },
+        "publish_requires_owner_choice": {
+          "type": "boolean"
+        },
+        "sale_requires_review": {
+          "type": "boolean"
+        },
+        "sale_request_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "guest",
+              "free",
+              "paid",
+              "seller",
+              "admin"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "default_visibility",
+        "publish_requires_owner_choice",
+        "sale_requires_review",
+        "sale_request_roles"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "tokens",
+    "components",
+    "screens",
+    "asset_policy"
+  ],
+  "additionalProperties": false
+}

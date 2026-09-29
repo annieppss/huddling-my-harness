@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "source_grounding",
+              "service_invariants",
+              "design_consistency"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "unknown"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 3
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "return_to": {
+            "type": "string",
+            "enum": [
+              "research",
+              "plan",
+              "concept",
+              "design"
+            ]
+          }
+        },
+        "required": [
+          "message",
+          "return_to"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "checks",
+    "findings"
+  ],
+  "additionalProperties": false
+}

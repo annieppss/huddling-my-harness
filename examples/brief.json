@@ -1,0 +1,15 @@
+{
+  "title": "허들링 학습 탐색 — 예시 입력",
+  "screen_ids": [
+    "library",
+    "skill-detail"
+  ],
+  "references": [
+    {
+      "id": "reference-1",
+      "source": "사용자가 확보한 uibowl 레퍼런스 URL 또는 식별자",
+      "excerpt": "REPLACE_ME: 실제 레퍼런스에서 관찰한 텍스트와 구조를 입력하세요."
+    }
+  ],
+  "operator_feedback": ""
+}
