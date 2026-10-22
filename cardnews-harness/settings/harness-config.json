@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "implementation_status": "public_example",
+  "runtime": "codex_chat",
+  "language": "ko",
+  "audience": "자동화를 시도했지만 용어나 설정에서 막히는 사람",
+  "purpose": "막힌 내용을 이해하고 저장해서 다시 참고할 수 있는 인스타그램 카드뉴스",
+  "content": {
+    "slide_count": 6,
+    "outline_policy": "topic_adaptive",
+    "fixed_first_role": "cover",
+    "fixed_last_role": "saveable_summary",
+    "body_slide_count": 4,
+    "tone": "friendly_polite_ko"
+  },
+  "research": {
+    "policy": "official_first_firsthand_cases_supplemental",
+    "read_source_content_required": true,
+    "separate_facts_and_cases": true
+  },
+  "design": {
+    "width": 1080,
+    "height": 1350,
+    "style": "visual_first_ramy",
+    "font_family": "SUIT",
+    "cover_title_size": 88,
+    "body_title_size": 76,
+    "body_size": 48,
+    "content_safe_margin": 72,
+    "numeric_defaults_selected_by": "assistant_adjustable_after_render_review",
+    "character_slides": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "figma_target_file": "figma-target.json",
+    "role_layouts": {
+      "cover": "topic_hook",
+      "body": "topic_adaptive_visual",
+      "summary": "visual_summary"
+    },
+    "reference_priority": "visual_first_policy"
+  },
+  "review": {
+    "required_criteria": [
+      "QA-01",
+      "QA-02",
+      "QA-03",
+      "QA-04",
+      "QA-05",
+      "QA-06"
+    ],
+    "suggestions_block_ready": false,
+    "unverified_required_checks_block_ready": true
+  },
+  "execution": {
+    "max_revisions": 2,
+    "max_transient_retries_per_operation": 1,
+    "retry_default_selected_by": "assistant",
+    "uncertain_figma_write_requires_state_read": true,
+    "resume_from": "last_valid_stage",
+    "reset_revision_budget_on_resume": false,
+    "reset_retry_budget_on_resume": false,
+    "human_decision_initial": "pending",
+    "auto_publish": false
+  },
+  "visual_policy": {
+    "mode": "visual_first_ramy",
+    "max_explanation_lines": 2,
+    "allowed_visual_kinds": [
+      "ramy_scene",
+      "annotated_screenshot",
+      "comparison",
+      "process_diagram"
+    ],
+    "body_visual_review_required": true,
+    "reject_paragraph_boxes": true,
+    "reject_decorative_mascot_only": true,
+    "ramy_placement": "본문 포함, 장의 의미에 맞는 행동·표정. 도식 중심 장은 생략 이유 기록",
+    "style_status": "설명 방식 확정, v4 세부 미감은 예시이며 최종 승인 아님"
+  }
+}
